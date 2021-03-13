@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chihuahua Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="intro" class="container splash">
+        <h1>Help chihuahua get home</h1>
+        <button id="play">play</button>
+    </div>
+    <div id="game" class="container hide">
+      <canvas id="chihuahua" width="1200" height="800"></canvas>
+      <button id="start">start</button>
+    </div>
+    <div id="gameover" class="container hide">
+        <h1>Game Over. You're a looser!</h1>
+        <button id="playagain">play again</button>
+    </div>
+    <div id="gamewon" class="container hide">
+        <h1>You won!</h1>
+        <button id="playagain">play again</button>
+        </div>
+    <script src="js/game.js"></script>
+    <script src="js/chihuahua.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
