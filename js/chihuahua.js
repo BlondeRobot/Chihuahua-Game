@@ -7,12 +7,21 @@ class chihuahua {
         this.w = 200;
         this.h = 150;
 
-        this.speedX = 0;
+        this.speedX = 1;
         this.speedY = 0;
-        this.ctx.fillStyle = 'fuchsia';
-        this.ctx.fillRect(this.x, this.y, this.w, this.h);
+        
 
         //this.direction = "right";
 
     }
 }
+
+drawChihuahua() {
+    this.ctx.fillStyle = 'fuchsia';
+    this.ctx.fillRect(this.x, this.y, this.w, this.h);
+}
+
+moveChihuahua() {
+ this.x += this.speedX
+}
+
