@@ -72,9 +72,10 @@ function generateSplashScreen(callback) {
        startButton.addEventListener('click', () => {
          let canvas = document.querySelector('#chihuahua');
          const ctx = canvas.getContext('2d');
-         const chihuahuaGame = new Game({ctx: ctx, chihuahua: new Chihuahua});
+         const chihuahuaGame = new Game({ctx: ctx, chihuahua: new chihuahua, bag: new bag, obstacle: new obstacle});
          
-       });  
+       });
+         
    } //close start game function
     
     generateSplashScreen(startGame);
@@ -93,7 +94,6 @@ function generateSplashScreen(callback) {
         let gameWon = document.getElementById('gamewon');
         gameOver.classList.remove('show');
         gameOver.classList.add('hide');
-        
         gameWon.classList.remove('hide');
         gameWon.classList.add('show');
       }  

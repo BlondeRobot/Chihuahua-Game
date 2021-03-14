@@ -8,8 +8,7 @@ class bag {
         this.h = 200;
 
         
-        this.ctx.fillStyle = 'brown';
-        this.ctx.fillRect(this.x, this.y, this.w, this.h);
+        
 
     }
 }
@@ -35,6 +34,11 @@ class obstacle {
         this.w,
         this.h
       )
+    }
+
+    drawBag() {
+        this.ctx.fillStyle = 'brown';
+        this.ctx.fillRect(this.x, this.y, this.w, this.h);
     }
 
     obstacleRandomFall() {
