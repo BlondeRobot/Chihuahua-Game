@@ -14,7 +14,7 @@ class bag {
     }
 }
 
-class Obstacles {
+class obstacle {
     constructor(ctx, x, y, w, h) {
       this.ctx = ctx
       this.x = x
@@ -27,7 +27,7 @@ class Obstacles {
     }
 }
 
-    drawObstacles() {
+    drawObstacle() {
       this.ctx.fillStyle = 'black';  
       this.ctx.fillRect(
         this.x,
@@ -37,7 +37,7 @@ class Obstacles {
       )
     }
 
-    obstaclesRandomFall() {
+    obstacleRandomFall() {
         this.x = this.randomX()
         this.y = 0
         this.x += this.speedX
