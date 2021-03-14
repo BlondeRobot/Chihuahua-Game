@@ -65,7 +65,7 @@ function generateSplashScreen(callback) {
      
     } //close generateSplashScreen
    
-    
+
    
    function startGame() {
        const startButton = document.querySelector('#start');
@@ -79,5 +79,23 @@ function generateSplashScreen(callback) {
     
     generateSplashScreen(startGame);
    
+    function printGameOver() {
+        let gameOver = document.getElementById('gameover');
+        let canvas = document.querySelector('#chihuahua');
+        canvas.classList.remove('show');
+        canvas.classList.add('hide');
+        gameOver.classList.remove('hide');
+        gameOver.classList.add('show');
+      }
+
+      function printGameWon() {
+        let gameOver = document.getElementById('gameover');
+        let gameWon = document.getElementById('gamewon');
+        gameOver.classList.remove('show');
+        gameOver.classList.add('hide');
+        
+        gameWon.classList.remove('hide');
+        gameWon.classList.add('show');
+      }  
 
 }); //close DOM LOAD function
