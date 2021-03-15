@@ -6,7 +6,11 @@ class Game {
     this.bag = new bag
    }
 
-
+   start() {
+      this.chihuahua.drawChihuahua();
+      this.bag.drawBag();
+      this.obstacle.drawObstacle();
+   }
 
 
 } //close Game class
@@ -15,8 +19,8 @@ class Game {
 //     this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height)
 //   }
 
-function start() {
-   this.chihuahua.drawChihuahua();
-   this.bag.drawBag();
-   this.obstacle.drawObstacle();
-}
+// function start() {
+//    this.chihuahua.drawChihuahua();
+//    this.bag.drawBag();
+//    this.obstacle.drawObstacle();
+// }

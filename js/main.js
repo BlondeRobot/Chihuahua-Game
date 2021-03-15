@@ -26,7 +26,7 @@ function generateSplashScreen(callback) {
          let canvas = document.querySelector('#chihuahuagame');
          const ctx = canvas.getContext('2d');
          const chihuahuaGame = new Game({ctx: ctx, chihuahua: new chihuahua, bag: new bag, obstacle: new obstacle});
-         start();
+         chihuahuaGame.start();
          //console.log('game started');
        });
          

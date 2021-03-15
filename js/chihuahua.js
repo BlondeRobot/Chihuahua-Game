@@ -25,24 +25,24 @@ class chihuahua {
 
 // function moveChihuahuaHorizontal() {
 //  this.x += this.speedX
-// }
+// } - add as method to contructor
 
 // function moveChihuahuaVertical(keyCode, speed) {
 //     switch (keyCode) {
 //       case 38:
 //         if (this.chihuahua.y > this.chihuahua.height)
 
-//         this.posX -= speed;
+//         this.chihuahua.y -= this.chihuahua.speedY;
 //         break;
 //       case 40:
 //         if (this.chihuahua.y > this.canvas.width - this.chihuahua.width)
 
-//         this.posX += speed;
+//         this.chihuahua.y += this.chihuahua.speedY;
 //         break;
 //       default:
 //         console.log('Invalid Key');
 //     }
-//   }
+//   } - add as method to constructor
 
 // collisionWithBag() {
 //     if (this.chihuahua.x < this.bag.x + this.bag.width &&
@@ -51,7 +51,7 @@ class chihuahua {
 //         this.chihuahua.y + this.chihuahua.height > this.bag.y)
 
 // printGameWon()   
-// }
+// } add as method to constructor
 
 // collisionWithObstacle() {
 //     if (this.chihuahua.x < this.obstacle.x + this.obstacle.width &&
@@ -60,4 +60,4 @@ class chihuahua {
 //         this.chihuahua.y + this.chihuahua.height > this.obstacle.y)
 
 // printGameOver()   
-// }
+// } add as method to constructor
