@@ -7,9 +7,11 @@ class bag {
         this.w = 300;
         this.h = 200;
 
-        
-        
-
+ 
+    }
+    drawBag() {
+        this.ctx.fillStyle = 'brown';
+        this.ctx.fillRect(this.x, this.y, this.w, this.h);
     }
 }
 
@@ -24,30 +26,28 @@ class obstacle {
       this.speedX = 0
       this.speedY = 1
     }
+    drawObstacle() {
+        this.ctx.fillStyle = 'black';  
+        this.ctx.fillRect(
+          this.x,
+          this.y,
+          this.w,
+          this.h
+        )
+      }
 }
 
-    drawObstacle() {
-      this.ctx.fillStyle = 'black';  
-      this.ctx.fillRect(
-        this.x,
-        this.y,
-        this.w,
-        this.h
-      )
-    }
+  
 
-    drawBag() {
-        this.ctx.fillStyle = 'brown';
-        this.ctx.fillRect(this.x, this.y, this.w, this.h);
-    }
+    
 
-    obstacleRandomFall() {
-        this.x = this.randomX()
-        this.y = 0
-        this.x += this.speedX
-        this.y += this.speedY
-    }
+    // obstacleRandomFall() {
+    //     this.x = this.randomX()
+    //     this.y = 0
+    //     this.x += this.speedX
+    //     this.y += this.speedY
+    // }
 
-    randomX() {
-        return Math.random()*700
-    }
+    // randomX() {
+    //     return Math.random()*700
+    // }

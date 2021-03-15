@@ -10,35 +10,40 @@ class chihuahua {
         this.speedX = 1;
         this.speedY = 0;
         
+       
 
         //this.direction = "right";
 
     }
+    drawChihuahua() {
+            this.ctx.fillStyle = 'blue';
+            this.ctx.fillRect(this.x, this.y, this.w, this.h)
+        }
 }
 
-drawChihuahua() {
-    this.ctx.fillStyle = 'fuchsia';
-    this.ctx.fillRect(this.x, this.y, this.w, this.h);
-}
+// function drawChihuahua() {
+//     this.ctx.fillStyle = 'blue';
+//     this.ctx.fillRect(this.x, this.y, this.w, this.h)
+// }
 
-moveChihuahua() {
- this.x += this.speedX
-}
+// moveChihuahua() {
+//  this.x += this.speedX
+// }
 
-collisionWithBag() {
-    if (this.chihuahua.x < this.bag.x + this.bag.width &&
-        this.chihuahua.x + this.chihuahua.width > this.bag.x &&
-        this.chihuahua.y < this.bag.y + this.bag.height &&
-        this.chihuahua.y + this.chihuahua.height > this.bag.y)
+// collisionWithBag() {
+//     if (this.chihuahua.x < this.bag.x + this.bag.width &&
+//         this.chihuahua.x + this.chihuahua.width > this.bag.x &&
+//         this.chihuahua.y < this.bag.y + this.bag.height &&
+//         this.chihuahua.y + this.chihuahua.height > this.bag.y)
 
-printGameWon()   
-}
+// printGameWon()   
+// }
 
-collisionWithObstacle() {
-    if (this.chihuahua.x < this.obstacle.x + this.obstacle.width &&
-        this.chihuahua.x + this.chihuahua.width > this.obstacle.x &&
-        this.chihuahua.y < this.obstacle.y + this.obstacle.height &&
-        this.chihuahua.y + this.chihuahua.height > this.obstacle.y)
+// collisionWithObstacle() {
+//     if (this.chihuahua.x < this.obstacle.x + this.obstacle.width &&
+//         this.chihuahua.x + this.chihuahua.width > this.obstacle.x &&
+//         this.chihuahua.y < this.obstacle.y + this.obstacle.height &&
+//         this.chihuahua.y + this.chihuahua.height > this.obstacle.y)
 
-printGameOver()   
-}
+// printGameOver()   
+// }
