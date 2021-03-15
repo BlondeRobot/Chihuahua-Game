@@ -21,14 +21,28 @@ class chihuahua {
         }
 }
 
-// function drawChihuahua() {
-//     this.ctx.fillStyle = 'blue';
-//     this.ctx.fillRect(this.x, this.y, this.w, this.h)
-// }
 
-// moveChihuahua() {
+
+// function moveChihuahuaHorizontal() {
 //  this.x += this.speedX
 // }
+
+// function moveChihuahuaVertical(keyCode, speed) {
+//     switch (keyCode) {
+//       case 38:
+//         if (this.chihuahua.y > this.chihuahua.height)
+
+//         this.posX -= speed;
+//         break;
+//       case 40:
+//         if (this.chihuahua.y > this.canvas.width - this.chihuahua.width)
+
+//         this.posX += speed;
+//         break;
+//       default:
+//         console.log('Invalid Key');
+//     }
+//   }
 
 // collisionWithBag() {
 //     if (this.chihuahua.x < this.bag.x + this.bag.width &&
