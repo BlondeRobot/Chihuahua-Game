@@ -1,9 +1,9 @@
 class Game {
    constructor(ctx) { 
     this.ctx = ctx
-    this.chihuahua = new chihuahua
-    this.obstacle = new obstacle
-    this.bag = new bag
+    this.chihuahua = new chihuahua(ctx)
+    this.obstacle = new obstacle(ctx)
+    this.bag = new bag(ctx)
    }
 
    start() {

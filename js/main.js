@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-
   
 function generateSplashScreen(callback) {
     
@@ -25,7 +24,7 @@ function generateSplashScreen(callback) {
        startButton.addEventListener('click', () => {
          let canvas = document.querySelector('#chihuahuagame');
          const ctx = canvas.getContext('2d');
-         const chihuahuaGame = new Game({ctx: ctx, chihuahua: new chihuahua, bag: new bag, obstacle: new obstacle});
+         const chihuahuaGame = new Game(ctx) //({ctx: ctx, chihuahua: new chihuahua, bag: new bag, obstacle: new obstacle});
          chihuahuaGame.start();
          //console.log('game started');
        });
@@ -33,6 +32,7 @@ function generateSplashScreen(callback) {
    } //close start game function
     
     generateSplashScreen(startGame);
+  }); //close DOM LOAD function
    
     // function printGameOver() {
     //     let gameOver = document.getElementById('gameover');
@@ -52,4 +52,3 @@ function generateSplashScreen(callback) {
     //     gameWon.classList.add('show');
     //   }  
 
-}); //close DOM LOAD function
