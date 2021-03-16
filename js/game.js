@@ -7,11 +7,9 @@ class Game {
    }
 
    start() {
-      this.chihuahua.drawChihuahua();
-      this.bag.drawBag();
-      this.obstacle.drawObstacle();
-      this.chihuahua.moveChihuahua();
-      this.assignControlToKeys
+      
+      this.assignControlToKeys()
+      window.requestAnimationFrame(this.update.bind(this))
    }
    clear() {
       this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height)
@@ -22,27 +20,35 @@ class Game {
       this.chihuahua.drawChihuahua();
       this.bag.drawBag();
       this.obstacle.drawObstacle();
+      window.requestAnimationFrame(this.update.bind(this))
+
    }
+
    assignControlToKeys() {
       document.addEventListener('keydown', (event) => {
       switch (event.code) {
         case 'ArrowUp': 
-          this.chihuahua.speedY -= 1;
+          console.log('testUp');
+          this.chihuahua.moveUp()
           break;
-        case 'ArrowDown': 
-          this.chihuahua.speedY += 1;
+        case 'ArrowDown':
+          console.log('testDown'); 
+          this.chihuahua.moveDown()
           break;
-        case 'ArrowLeft': 
-          this.chihuahua.speedX -= 1;
+        case 'ArrowLeft':
+          console.log('testLeft'); 
+          this.chihuahua.moveLeft()
           break;
-        case 'ArrowRight': 
-          this.chihuahua.speedX += 1;
+        case 'ArrowRight':
+          console.log('testRight'); 
+          this.chihuahua.moveRight()
           break;
       }
     });
-    document.addEventListener('keyup', (event) => {
-      this.chihuahua.speedX = 0;
-      this.chihuahua.speedY = 0;
+
+      document.addEventListener('keyup', (event) => {
+         this.chihuahua.speedX = 0;
+         this.chihuahua.speedY = 0;
     });
    }
 } //close Game class

@@ -48,6 +48,13 @@ class obstacle {
     //     this.y += this.speedY
     // }
 
+      // obstacleRandomRaise() {
+    //     this.x = this.randomX()
+    //     this.y = 0
+    //     this.x += this.speedX
+    //     this.y -= this.speedY
+    // }
+
     // randomX() {
     //     return Math.random()*700
     // }
