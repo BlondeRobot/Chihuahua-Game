@@ -7,25 +7,28 @@ class chihuahua {
         this.w = 200;
         this.h = 150;
 
-        this.speedX = 1;
+        this.speedX = 0;
         this.speedY = 0;
         
        
 
-        //this.direction = "right";
+        
 
     }
     drawChihuahua() {
             this.ctx.fillStyle = 'blue';
             this.ctx.fillRect(this.x, this.y, this.w, this.h)
         }
+    moveChihuahua() {
+            this.x += this.speedX
+            this.y += this.speedY
+           } 
+        
 }
 
 
 
-// function moveChihuahuaHorizontal() {
-//  this.x += this.speedX
-// } - add as method to contructor
+
 
 // function moveChihuahuaVertical(keyCode, speed) {
 //     switch (keyCode) {
