@@ -3,12 +3,14 @@ class Game {
     this.ctx = ctx
     this.chihuahua = new chihuahua(ctx)
     this.obstacle = new obstacle(ctx)
+    this.randomObstacles = []
     this.bag = new bag(ctx)
    }
 
    start() {
       
       this.assignControlToKeys()
+      
       window.requestAnimationFrame(this.update.bind(this))
    }
    clear() {
@@ -20,6 +22,10 @@ class Game {
       this.chihuahua.drawChihuahua();
       this.bag.drawBag();
       this.obstacle.drawObstacle();
+      this.obstacle.obstacleRandomFall();
+      //this.obstacle.createRandomObstacles();
+      //this.obstacle.obstacleRandomRaise();
+      //this.chihuahua.collisionWithBag();
       window.requestAnimationFrame(this.update.bind(this))
 
    }
@@ -46,10 +52,6 @@ class Game {
       }
     });
 
-      document.addEventListener('keyup', (event) => {
-         this.chihuahua.speedX = 0;
-         this.chihuahua.speedY = 0;
-    });
    }
 } //close Game class
 

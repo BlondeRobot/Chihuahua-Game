@@ -4,24 +4,24 @@ class bag {
 
         this.x = 900;
         this.y = 300;
-        this.w = 300;
-        this.h = 200;
+        this.width = 300;
+        this.height = 200;
 
  
     }
     drawBag() {
         this.ctx.fillStyle = 'brown';
-        this.ctx.fillRect(this.x, this.y, this.w, this.h);
+        this.ctx.fillRect(this.x, this.y, this.width, this.height);
     }
 }
 
 class obstacle {
-    constructor(ctx, x, y, w, h) {
+    constructor(ctx, x, y, width, height) {
       this.ctx = ctx
-      this.x = x
-      this.y = y
-      this.w = w
-      this.h = h
+      this.x = this.randomX()
+      this.y = 0
+      this.width = 150
+      this.height = 200
 
       this.speedX = 0
       this.speedY = 1
@@ -31,13 +31,41 @@ class obstacle {
         this.ctx.fillRect(
           this.x,
           this.y,
-          this.w,
-          this.h
+          this.width,
+          this.height
         )
       }
+     obstacleRandomFall() {
+    
+        this.x += this.speedX
+        this.y += this.speedY
+    }
+
+    //  obstacleRandomRaise() {
+        
+    //     this.y = 800
+    //     this.x += this.speedX
+    //     this.y -= this.speedY
+    // }
+
+    randomX() {
+        return Math.random()*900
+    }  
+
+    createRandomObstacles() {
+        
+        this.game.RandomObstacles.push(new obstacle(ctx, this.randomX, 0, this.width, this.height));
+        this.game.RandomObstacles.push(new obstacle(ctx, this.randomX, this.canvas.height, this.width, this.height));
+    }
 }
 
-  
+// constructor(x, y, size, ctx) {
+//     super(x, y, size, ctx)
+//     this.x = Math.floor(Math.random() * canvas.width); // ver medida del cerebro, puede que haga falta añadir this.width;
+//     this.y = 0;
+//     this.size = 100;
+//     this.ctx = canvas.getContext("2d");
+//   }  
 
     
 
@@ -48,9 +76,9 @@ class obstacle {
     //     this.y += this.speedY
     // }
 
-      // obstacleRandomRaise() {
+    //   obstacleRandomRaise() {
     //     this.x = this.randomX()
-    //     this.y = 0
+    //     this.y = this.canvas.height
     //     this.x += this.speedX
     //     this.y -= this.speedY
     // }
