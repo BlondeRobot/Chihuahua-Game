@@ -43,12 +43,13 @@ function generateSplashScreen(callback) {
     //     gameOver.classList.add('show');
     //   }
 
-    //   function printGameWon() {
-    //     let gameOver = document.getElementById('gameover');
-    //     let gameWon = document.getElementById('gamewon');
-    //     gameOver.classList.remove('show');
-    //     gameOver.classList.add('hide');
-    //     gameWon.classList.remove('hide');
-    //     gameWon.classList.add('show');
-    //   }  
+    function printGameWon() {
+      
+      let game = document.getElementById("game");
+      let gameWon = document.getElementById("gamewon");
+      game.classList.remove("show");
+      game.classList.add('hide');
+      gameWon.classList.remove("hide");
+      gameWon.classList.add("show");
+    }  
 

@@ -22,7 +22,6 @@ class obstacle {
     this.height = 200;
 
     this.speedX = 0;
-    //this.speedY = 1
     this.speedY = this.randomSpeed();
   }
   drawObstacle() {
@@ -57,13 +56,5 @@ class obstacle {
   randomSpeed() {
     return 1 + Math.random() * (-1 - 1);
   }
-  createRandomObstacles() {
-    //let temporaryObstacle = new obstacle(ctx, x, y, width, height)
-    //RandomObstacles.push(temporaryObstacle)
-    //RandomObstacles.push(new obstacle(ctx, x, y, width, height));
-    //     this.game.RandomObstacles.push(temporaryObstacle)
-    // this.game.RandomObstacles.push(new obstacle(ctx, x, y, width, height));
-    //     this.game.RandomObstacles.push(new obstacle(ctx, this.randomX, 0, this.width, this.height)); //falling obstacle
-    //     this.game.RandomObstacles.push(new obstacle(ctx, this.randomX, this.canvas.height, this.width, this.height)); // rising obstacle
-  }
+ 
 }

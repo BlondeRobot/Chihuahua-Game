@@ -38,8 +38,19 @@ class Game {
     // this.obstacle.obstacleRandomFall();
     // this.obstacle.createRandomObstacles();
 
-    //this.chihuahua.collisionWithBag(chihuahua, bag);
-    // this.chihuahua.collisionWithObstacle(chihuahua, obstacle);
+    
+    if (this.chihuahua.collisionWithBag(this.bag)) {
+        console.log('collision with bag');
+        //this.clear();
+        printGameWon();
+      }
+
+    // this.randomObstacles.forEach((obstacle) => {
+    //  if (this.chihuahua.collisionWithObstacle(this.obstacle)) {
+    //    console.log("collision with obstacle"); 
+    //  } 
+    // });  
+
     window.requestAnimationFrame(this.update.bind(this));
   }
 
