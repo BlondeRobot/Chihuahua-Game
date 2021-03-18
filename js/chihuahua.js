@@ -32,18 +32,7 @@ class chihuahua {
     this.x = this.x + this.speedX;
   }
 
-  // collisionWithBag() {
-  //   if (this.x < this.bag.x + this.bag.width &&
-  //       this.x + this.width > this.bag.x &&
-  //       this.y < this.bag.y + this.bag.height &&
-  //       this.y + this.height > this.bag.y) {
-  //         console.log('collision detected')
-  //       }
-
-//printGameWon()
-//} 
-
-//   collisionWithBag() {
+//   collisionWithBag(this.chihuahua, this.bag) {
 //     if (this.chihuahua.x < this.bag.x + this.bag.width &&
 //         this.chihuahua.x + this.chihuahua.width > this.bag.x &&
 //         this.chihuahua.y < this.bag.y + this.bag.height &&
@@ -54,10 +43,37 @@ class chihuahua {
 // //printGameWon()
 // } 
 
+  collisionWithBag() {
+    if (this.chihuahua.x < this.bag.x + this.bag.width &&
+        this.chihuahua.x + this.chihuahua.width > this.bag.x &&
+        this.chihuahua.y < this.bag.y + this.bag.height &&
+        this.chihuahua.y + this.chihuahua.height > this.bag.y) {
+          console.log('collision detected')
+        }
+
+//printGameWon()
+  } 
+
+collisionWithObstacle(chihuahua, obstacle) {
+ return !(
+        ((this.chihuahua.y + a.chihuahua.height) < (this.obstacle.y)) ||
+        (this.chihuahua.y > (this.obstacle.y + this.obstacle.height)) ||
+        ((this.chihuahua.x + this.chihuahua.width) < this.obstacle.x) ||
+        (this.chihuahua.x > (this.obstacle.x + this.obstacle.width))
+    );
+ }
+
 }
 
 
-
+// collisionWithObstacle(chihuahua, obstacle) {
+//  return !(
+//         ((this.chihuahua.y + a.chihuahua.height) < (this.obstacle.y)) ||
+//         (this.chihuahua.y > (this.obstacle.y + this.obstacle.height)) ||
+//         ((this.chihuahua.x + this.chihuahua.width) < this.obstacle.x) ||
+//         (this.chihuahua.x > (this.obstacle.x + this.obstacle.width))
+//     );
+//  }
 
 
 

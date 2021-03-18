@@ -24,8 +24,9 @@ class Game {
       this.obstacle.drawObstacle();
       this.obstacle.obstacleRandomFall();
       //this.obstacle.createRandomObstacles();
-      //this.obstacle.obstacleRandomRaise();
-      //this.chihuahua.collisionWithBag();
+      
+      //this.chihuahua.collisionWithBag(chihuahua, bag);
+      this.chihuahua.collisionWithObstacle(chihuahua, obstacle);
       window.requestAnimationFrame(this.update.bind(this))
 
    }

@@ -41,7 +41,7 @@ class obstacle {
         this.y += this.speedY
     }
 
-    //  obstacleRandomRaise() {
+    //  obstacleRandomRise() {
         
     //     this.y = 800
     //     this.x += this.speedX
@@ -54,35 +54,11 @@ class obstacle {
 
     createRandomObstacles() {
         
-        this.game.RandomObstacles.push(new obstacle(ctx, this.randomX, 0, this.width, this.height));
-        this.game.RandomObstacles.push(new obstacle(ctx, this.randomX, this.canvas.height, this.width, this.height));
+        this.game.RandomObstacles.push(new obstacle(ctx, this.randomX, 0, this.width, this.height)); //falling obstacle
+        this.game.RandomObstacles.push(new obstacle(ctx, this.randomX, this.canvas.height, this.width, this.height)); // rising obstacle
     }
 }
 
-// constructor(x, y, size, ctx) {
-//     super(x, y, size, ctx)
-//     this.x = Math.floor(Math.random() * canvas.width); // ver medida del cerebro, puede que haga falta añadir this.width;
-//     this.y = 0;
-//     this.size = 100;
-//     this.ctx = canvas.getContext("2d");
-//   }  
+ 
 
     
-
-    // obstacleRandomFall() {
-    //     this.x = this.randomX()
-    //     this.y = 0
-    //     this.x += this.speedX
-    //     this.y += this.speedY
-    // }
-
-    //   obstacleRandomRaise() {
-    //     this.x = this.randomX()
-    //     this.y = this.canvas.height
-    //     this.x += this.speedX
-    //     this.y -= this.speedY
-    // }
-
-    // randomX() {
-    //     return Math.random()*700
-    // }
