@@ -31,31 +31,39 @@ function generateSplashScreen(callback) {
     
     generateSplashScreen(startGame);
 
-    // function playAgainWon(callback) {
-    // let gameWon = document.getElementById("gamewon");  
-    // const playAgainWonButton = document.querySelector('#playagainwon');
-    //  playAgainWonButton.addEventListener('click', () => {
-    //  gameWon.classList.add('hide');
-    //  const game = document.getElementById('game');
-    //  game.classList.remove('hide');
-    //  console.log('play new game')
-     
-    // printGameWon();
+    // function playAgainWon() {
+    //   let gameWon = document.getElementById("gamewon");  
+    //   const playAgainWonButton = document.querySelector('#playagainwon');
+    //   playAgainWonButton.addEventListener('click', () => {
+    //   gameWon.classList.add('hide');
+    //   const game = document.getElementById('game');
+    //   game.classList.remove('hide');
+    //   console.log('play new game, winner')
     //  }); 
     // } //close playAgainWon
-
-    // playAgainWon(printGameWon);
+    // playAgainWon();
    
   }); //close DOM LOAD function
+
+   function playAgainLost() {
+      let gameOver = document.getElementById("gameover");  
+      const playAgainLostButton = document.querySelector('#playagainlost');
+      playAgainLostButton.addEventListener('click', () => {
+      gameOver.classList.add('hide');
+      const game = document.getElementById('game');
+      game.classList.remove('hide');
+      console.log('play new game, loser')
+     }); 
+    } //close playAgainLost
+      playAgainLost();
    
-    // function printGameOver() {
-    //     let gameOver = document.getElementById('gameover');
-    //     let canvas = document.querySelector('#chihuahuagame');
-    //     canvas.classList.remove('show');
-    //     canvas.classList.add('hide');
-    //     gameOver.classList.remove('hide');
-    //     
-    //   }
+    function printGameOver() {
+        let gameOver = document.getElementById('gameover');
+        const game = document.getElementById("game");
+        game.classList.add("hide");
+        gameOver.classList.remove('hide');
+        
+      }
 
     function printGameWon() {
       let game = document.getElementById("game");

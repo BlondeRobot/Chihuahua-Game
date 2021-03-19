@@ -48,6 +48,7 @@ class Game {
     this.randomObstacles.forEach((obstacle) => {
      if (obstacle.collisionWithChihuahua(this.chihuahua)) {
        console.log("collision with obstacle"); 
+       printGameOver();
      } 
     });  
 
