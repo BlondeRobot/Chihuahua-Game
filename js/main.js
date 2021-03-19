@@ -2,15 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
 function generateSplashScreen(callback) {
-    
     const intro =document.getElementById('intro');   
-   
     const playButton = document.querySelector('#play');
      playButton.addEventListener('click', () => {
      intro.classList.add('hide');
      const game = document.getElementById('game');
      game.classList.remove('hide');
-     game.classList.add('show');
+     
      startGame()
      });
      
@@ -32,6 +30,22 @@ function generateSplashScreen(callback) {
    } //close start game function
     
     generateSplashScreen(startGame);
+
+    // function playAgainWon(callback) {
+    // let gameWon = document.getElementById("gamewon");  
+    // const playAgainWonButton = document.querySelector('#playagainwon');
+    //  playAgainWonButton.addEventListener('click', () => {
+    //  gameWon.classList.add('hide');
+    //  const game = document.getElementById('game');
+    //  game.classList.remove('hide');
+    //  console.log('play new game')
+     
+    // printGameWon();
+    //  }); 
+    // } //close playAgainWon
+
+    // playAgainWon(printGameWon);
+   
   }); //close DOM LOAD function
    
     // function printGameOver() {
@@ -40,16 +54,14 @@ function generateSplashScreen(callback) {
     //     canvas.classList.remove('show');
     //     canvas.classList.add('hide');
     //     gameOver.classList.remove('hide');
-    //     gameOver.classList.add('show');
+    //     
     //   }
 
     function printGameWon() {
-      
       let game = document.getElementById("game");
       let gameWon = document.getElementById("gamewon");
-      game.classList.remove("show");
-      game.classList.add('hide');
+      game.classList.add("hide");
       gameWon.classList.remove("hide");
-      gameWon.classList.add("show");
-    }  
+     
+    }   
 

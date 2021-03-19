@@ -47,8 +47,6 @@ class obstacle {
     this.y += this.speedY;
   }
 
- 
-
   randomX() {
     return Math.random() * 900;
   }
@@ -56,5 +54,12 @@ class obstacle {
   randomSpeed() {
     return 1 + Math.random() * (-1 - 1);
   }
- 
+  collisionWithChihuahua(chihuahua) {
+    return (
+      this.x < chihuahua.x + chihuahua.width &&
+      this.x + this.width > chihuahua.x &&
+      this.y < chihuahua.y + chihuahua.height &&
+      this.y + this.height > chihuahua.y
+    );
+  }
 }

@@ -45,11 +45,11 @@ class Game {
         printGameWon();
       }
 
-    // this.randomObstacles.forEach((obstacle) => {
-    //  if (this.chihuahua.collisionWithObstacle(this.obstacle)) {
-    //    console.log("collision with obstacle"); 
-    //  } 
-    // });  
+    this.randomObstacles.forEach((obstacle) => {
+     if (obstacle.collisionWithChihuahua(this.chihuahua)) {
+       console.log("collision with obstacle"); 
+     } 
+    });  
 
     window.requestAnimationFrame(this.update.bind(this));
   }
