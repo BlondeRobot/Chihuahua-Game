@@ -60,6 +60,7 @@ canvas {
   height: 800px;
   background-color: mediumvioletred;
   justify-content: center;
+  background-image: url('images/splash\ background\ alt\ 2.png');
 }
 
 #gameover p {

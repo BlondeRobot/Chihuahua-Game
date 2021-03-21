@@ -8,10 +8,8 @@ class bag {
     this.height = 250;
   }
   drawBag() {
-    // this.ctx.fillStyle = "brown";
-    // this.ctx.fillRect(this.x, this.y, this.width, this.height);
       const bagImg = new Image();
-      bagImg.src = "images/bag cutout.png";
+      bagImg.src = "images/bag cutout2.png";
       this.ctx.drawImage(bagImg, this.x, this.y, this.width, this.height);
   }
 }
@@ -29,10 +27,8 @@ class obstacle {
     this.interval = undefined;
   }
   drawObstacle() {
-    // this.ctx.fillStyle = "black";
-    // this.ctx.fillRect(this.x, this.y, this.width, this.height);
     const obstacleImg = new Image();
-    obstacleImg.src = "images/rotweiller cutout.png";
+    obstacleImg.src = "images/rotweiller cutout2.png";
     this.ctx.drawImage(obstacleImg, this.x, this.y, this.width, this.height);
   }
 

@@ -10,10 +10,8 @@ class chihuahua {
   }
 
   drawChihuahua() {
-    // this.ctx.fillStyle = "blue";
-    // this.ctx.fillRect(this.x, this.y, this.width, this.height);
     const chihuahuaImg = new Image();
-    chihuahuaImg.src = "images/chihuahua cutout resized.png";
+    chihuahuaImg.src = "images/chihuahua cutout2.png";
     this.ctx.drawImage(chihuahuaImg, this.x, this.y, this.width, this.height);
   }
 

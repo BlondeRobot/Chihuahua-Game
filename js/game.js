@@ -6,6 +6,7 @@ class Game {
       new obstacle(ctx),
       new obstacle(ctx),
       new obstacle(ctx),
+      new obstacle(ctx),
     ];
     this.bag = new bag(ctx);
     this.printGameOver = printGameOver;
@@ -29,19 +30,15 @@ class Game {
     });
   }
 
-  // stopAllObstacles() {
-  //   this.randomObstacles.forEach((obstacle) => {
-  //     obstacle.stopObstacle();
-  //   });
-  // }
-
-  // reset() {
-  //   const ctx = canvas.getContext("2d");
-  //   const newGame = new Game(ctx);
-  //   newGame.start();
-  // }
+  endGame() {
+    let obstacleMove = obstacle.startObstacleMove();
+    //clearInterval(obstacleMove);
+    obstacle.stopObstacle(obstacleMove);  
+    
+  }
 
   update() {
+    
     this.clear();
     this.chihuahua.drawChihuahua();
     this.bag.drawBag();
@@ -49,15 +46,14 @@ class Game {
 
     if (this.chihuahua.collisionWithBag(this.bag)) {
       console.log("collision with bag");
-      //this.clear();
       this.printGameWon();
     }
 
     this.randomObstacles.forEach((obstacle) => {
       if (obstacle.collisionWithChihuahua(this.chihuahua)) {
         console.log("collision with obstacle");
-        //obstacle.stopObstacle(obstacle.startObstacleMove());
-        this.printGameOver();
+        this.endGame; 
+        this.printGameOver();     
       }
     });
 
