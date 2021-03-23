@@ -13,7 +13,7 @@ class Game {
     this.printGameWon = printGameWon;
     this.playAgainLost = playAgainLost;
     this.playAgainWon = playAgainWon;
-    
+    this.flag = false    
   }
 
   start() {
@@ -46,7 +46,7 @@ class Game {
       this.printGameWon();
       this.playAgainWon();
       this.randomObstacles.forEach((obstacle) => {
-         obstacle.stopObstacle();
+        obstacle.stopObstacle();
        });
        return;
     }
@@ -55,16 +55,18 @@ class Game {
       if (obstacle.collisionWithChihuahua(this.chihuahua)) {
         console.log("collision with obstacle");
         let collisionSound = document.getElementById("bark");
-        //collisionSound.play();
+        collisionSound.play();
         this.printGameOver();
         this.playAgainLost();
         this.randomObstacles.forEach((obstacle) => { 
           obstacle.stopObstacle();
         });
-        return;
+        this.flag = true
       }
     });
-
+    if (this.flag === true) {
+      return 
+    }
     window.requestAnimationFrame(this.update.bind(this));
   }
 
