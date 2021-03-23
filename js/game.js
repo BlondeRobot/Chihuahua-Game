@@ -30,15 +30,20 @@ class Game {
     });
   }
 
-  endGame() {
-    let obstacleMove = obstacle.startObstacleMove();
-    //clearInterval(obstacleMove);
-    obstacle.stopObstacle(obstacleMove);  
-    
-  }
+  // endGame() {
+  //   let obstacleMove = obstacle.startObstacleMove();
+  //   //clearInterval(obstacleMove);
+  //   obstacle.stopObstacle(obstacleMove);
+  // }
+
+  //endGame() {
+    // let obstacleMove = obstacle.startObstacleMove();
+    // //clearInterval(obstacleMove);
+    // obstacle.stopObstacle(obstacleMove);
+    //clearInterval(obstacle.interval);
+  //}
 
   update() {
-    
     this.clear();
     this.chihuahua.drawChihuahua();
     this.bag.drawBag();
@@ -52,8 +57,9 @@ class Game {
     this.randomObstacles.forEach((obstacle) => {
       if (obstacle.collisionWithChihuahua(this.chihuahua)) {
         console.log("collision with obstacle");
-        this.endGame; 
-        this.printGameOver();     
+        let collisionSound = document.getElementById("bark");
+        collisionSound.play();
+        this.printGameOver();
       }
     });
 

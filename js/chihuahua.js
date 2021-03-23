@@ -4,14 +4,14 @@ class chihuahua {
     this.x = 0;
     this.y = 340;
     this.width = 150;
-    this.height = 120;
+    this.height = 105;
     this.speedX = 50;
     this.speedY = 50;
   }
 
   drawChihuahua() {
     const chihuahuaImg = new Image();
-    chihuahuaImg.src = "images/chihuahua cutout2.png";
+    chihuahuaImg.src = "images/main chihuahua w150h105.png";
     this.ctx.drawImage(chihuahuaImg, this.x, this.y, this.width, this.height);
   }
 

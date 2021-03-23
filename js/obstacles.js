@@ -3,13 +3,13 @@ class bag {
     this.ctx = ctx;
 
     this.x = 900;
-    this.y = 275;
+    this.y = 259;
     this.width = 300;
-    this.height = 250;
+    this.height = 281;
   }
   drawBag() {
       const bagImg = new Image();
-      bagImg.src = "images/bag cutout2.png";
+      bagImg.src = "images/bag cutout w300h281.png";
       this.ctx.drawImage(bagImg, this.x, this.y, this.width, this.height);
   }
 }
@@ -19,7 +19,7 @@ class obstacle {
     this.ctx = ctx;
     this.x = this.randomX();
     this.y = 0;
-    this.width = 150;
+    this.width = 96;
     this.height = 220;
 
     this.speedX = 0;
@@ -28,7 +28,7 @@ class obstacle {
   }
   drawObstacle() {
     const obstacleImg = new Image();
-    obstacleImg.src = "images/rotweiller cutout2.png";
+    obstacleImg.src = "images/pitbull cutout96w220h.png";
     this.ctx.drawImage(obstacleImg, this.x, this.y, this.width, this.height);
   }
 
@@ -42,13 +42,12 @@ class obstacle {
   }
 
   startObstacleMove() {
-    this.interval  = setInterval(this.move.bind(this));
+    this.interval = setInterval(this.move.bind(this));
   }
 
   stopObstacle() {
     if (this.interval) {
-      clearInterval(this.interval)
-
+      clearInterval(this.interval);
     }
   }
 
