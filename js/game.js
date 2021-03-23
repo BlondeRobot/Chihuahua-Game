@@ -1,5 +1,5 @@
 class Game {
-  constructor(ctx, printGameOver, printGameWon) {
+  constructor(ctx, printGameOver, printGameWon, playAgainLost, playAgainWon) {
     this.ctx = ctx;
     this.chihuahua = new chihuahua(ctx);
     this.randomObstacles = [
@@ -11,6 +11,9 @@ class Game {
     this.bag = new bag(ctx);
     this.printGameOver = printGameOver;
     this.printGameWon = printGameWon;
+    this.playAgainLost = playAgainLost;
+    this.playAgainWon = playAgainWon;
+    
   }
 
   start() {
@@ -36,12 +39,6 @@ class Game {
   //   obstacle.stopObstacle(obstacleMove);
   // }
 
-  //endGame() {
-    // let obstacleMove = obstacle.startObstacleMove();
-    // //clearInterval(obstacleMove);
-    // obstacle.stopObstacle(obstacleMove);
-    //clearInterval(obstacle.interval);
-  //}
 
   update() {
     this.clear();
@@ -52,6 +49,7 @@ class Game {
     if (this.chihuahua.collisionWithBag(this.bag)) {
       console.log("collision with bag");
       this.printGameWon();
+      this.playAgainWon();
     }
 
     this.randomObstacles.forEach((obstacle) => {
@@ -60,6 +58,7 @@ class Game {
         let collisionSound = document.getElementById("bark");
         collisionSound.play();
         this.printGameOver();
+        this.playAgainLost();
       }
     });
 

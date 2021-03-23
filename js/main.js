@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     startButton.addEventListener("click", () => {
       let canvas = document.querySelector("#chihuahuagame");
       const ctx = canvas.getContext("2d");
-      const chihuahuaGame = new Game(ctx, printGameOver);
+      const chihuahuaGame = new Game(ctx, printGameOver, printGameWon, playAgainLost, playAgainWon);
       chihuahuaGame.start();
       //console.log('game started');
     });
