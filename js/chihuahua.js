@@ -17,18 +17,26 @@ class chihuahua {
 
   moveUp() {
     this.y = this.y - this.speedY;
+    if (this.y < 0) {
+      this.y = 0;
+    }
   }
 
   moveDown() {
     this.y = this.y + this.speedY;
+    if (this.y > 700) {this.y = 700;}
   }
 
   moveLeft() {
     this.x = this.x - this.speedX;
+    if (this.x < 0) {
+      this.x = 0;
+    }
   }
 
   moveRight() {
     this.x = this.x + this.speedX;
+    if (this.x > 1200) {this.x = 1100}
   }
 
   collisionWithBag(bag) {

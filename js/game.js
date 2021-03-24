@@ -48,6 +48,7 @@ class Game {
       this.randomObstacles.forEach((obstacle) => {
         obstacle.stopObstacle();
        });
+       this.clear();
        return;
     }
 
@@ -61,6 +62,7 @@ class Game {
         this.randomObstacles.forEach((obstacle) => { 
           obstacle.stopObstacle();
         });
+        this.clear();
         this.flag = true
       }
     });
