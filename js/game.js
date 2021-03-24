@@ -34,15 +34,13 @@ class Game {
   }
 
 
-  update() {
-    console.log("update still running");
+  update() {  
     this.clear();
     this.chihuahua.drawChihuahua();
     this.bag.drawBag();
     this.drawAllObstacles();
 
     if (this.chihuahua.collisionWithBag(this.bag)) {
-      console.log("collision with bag");
       this.printGameWon();
       this.playAgainWon();
       this.randomObstacles.forEach((obstacle) => {
@@ -54,7 +52,6 @@ class Game {
 
     this.randomObstacles.forEach((obstacle) => {
       if (obstacle.collisionWithChihuahua(this.chihuahua)) {
-        console.log("collision with obstacle");
         let collisionSound = document.getElementById("bark");
         collisionSound.play();
         this.printGameOver();
@@ -67,7 +64,7 @@ class Game {
       }
     });
     if (this.flag === true) {
-      return 
+      return; 
     }
     window.requestAnimationFrame(this.update.bind(this));
   }
@@ -76,22 +73,18 @@ class Game {
     document.addEventListener("keydown", (event) => {
       switch (event.code) {
         case "ArrowUp":
-          console.log("testUp");
           this.chihuahua.moveUp();
           break;
         case "ArrowDown":
-          console.log("testDown");
           this.chihuahua.moveDown();
           break;
         case "ArrowLeft":
-          console.log("testLeft");
           this.chihuahua.moveLeft();
           break;
         case "ArrowRight":
-          console.log("testRight");
           this.chihuahua.moveRight();
           break;
       }
     });
   }
-} //close Game class
+} 

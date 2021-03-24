@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       startGame();
     });
-  } //close generateSplashScreen
+  }
 
   function startGame() {
     const startButton = document.querySelector("#start");
@@ -18,9 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const ctx = canvas.getContext("2d");
       const chihuahuaGame = new Game(ctx, printGameOver, printGameWon, playAgainLost, playAgainWon);
       chihuahuaGame.start();
-      //console.log('game started');
     });
-  } //close start game function
+  }
 
   generateSplashScreen(startGame);
 
@@ -31,9 +30,8 @@ document.addEventListener("DOMContentLoaded", () => {
     gameWon.classList.add('hide');
     const game = document.getElementById('game');
     game.classList.remove('hide');
-    console.log('play new game, winner')
    });
-  } //close playAgainWon
+  }
  
 
   function playAgainLost() {
@@ -43,9 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
       gameOver.classList.add("hide");
       const game = document.getElementById("game");
       game.classList.remove("hide");
-      console.log("play new game, loser");
     });
-  } //close playAgainLost
+  }
 
   function printGameOver() {
     let gameOver = document.getElementById("gameover");
@@ -61,6 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
     gameWon.classList.remove("hide");
   }
 
-}); //close DOM LOAD function
+});
 
 
